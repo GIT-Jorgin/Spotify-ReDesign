@@ -20,13 +20,35 @@ export const Body = styled.div`
     margin: 0;
     padding: 0;
     outline: 0;
+    overflow: scroll;
+
+/* width */
+&::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+&::-webkit-scrollbar-track {
+  border-radius: 100px;
+}
+ 
+/* Handle */
+&::-webkit-scrollbar-thumb {
+  background: #B0A5A8; 
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #A5999D;
+}
 `;
 
 export const SideNav = styled.div`
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 305px;
     height: calc(100% - 80px);
     background: rgb(0,39,64);
     background: linear-gradient(302deg, rgba(0,39,64,1) 0%, rgba(1,63,94,1) 85%);
@@ -51,6 +73,17 @@ export const SideNav = styled.div`
 &::-webkit-scrollbar-thumb:hover {
   background: #A5999D;
 }
+`;
+
+export const GhostNav = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 80px);
+    background: rgba(0,39,64, 0);
+    overflow-y: auto;
+    overflow-x: hidden;
 `;
 
 export const SideNavContainer = styled.div`
@@ -244,14 +277,210 @@ export const MusicVolume = styled.div`
 
 export const MainContainer = styled.div`
     display: grid;
-    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-rows: 330px 1fr 1fr;
     background: rgba(250, 251, 254, 1);
 `;
 
 export const Header = styled.div`
     width: 100%;
-    height: 100%;
+    display: flex;
+    align-items: space-evenly;
+    justify-content: center;
     background: rgb(29,233,182);
-    background: linear-gradient(142deg, rgba(29,233,182,1) 0%, rgba(0,182,234,1) 85%);
+    background: linear-gradient(158deg, rgba(29,233,182,1) 0%, rgba(0,182,234,1) 85%);
+`;
 
+export const HeaderInfo = styled.div`
+    display: block;
+    max-width: 500px;
+`;
+
+export const HeaderIMG = styled.img`
+    align-self: flex-end;
+    width: 32%;
+    opacity: .4;
+`;
+
+export const HeaderTitle = styled.h1`
+    @font-face {
+            font-family: 'SF Pro Text Light';
+            src: local('SF Pro Text Light'), url(${SFProTextLight}) format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+    line-height: 48px;
+    font-family: 'SF Pro Text Light';
+    font-weight: 300;
+    font-size: 50px;
+    color: #FFF;
+`;
+
+export const HeaderDesc = styled.h5`
+    @font-face {
+        font-family: 'SF Pro Text Regular';
+        src: local('SF Pro Text Regular'), url(${SFProTextRegular}) format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+    font-weight: 400;
+    font-family: 'SF Pro Text Regular';
+    font-size: 16px;
+    color: #FFF;
+`;
+
+export const HeaderInteract = styled.div`
+    display: flex;
+    width: 270px;
+    justify-content: space-between;
+`;
+
+export const HeaderButton = styled.button`
+    @font-face {
+        font-family: 'SF Pro Text SemiBold';
+        src: local('SF Pro Text SemiBold'), url(${SFProTextSemibold}) format('truetype');
+        font-weight: 600;
+        font-style: normal;
+    }
+    
+    cursor: pointer;
+    font-family: 'SF Pro Text SemiBold';
+    font-weight: 600;
+    width: 160px;
+    outline: none;
+    height: 36px;
+    background: white;
+    border: 0px;
+    border-radius: 100px;
+    color: #1DE9B6;
+    font-size: 14px;
+`;
+
+export const HeaderAction = styled.img`
+    cursor: pointer;
+`;
+
+export const Releases = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+`;
+
+export const ReleasesTitle = styled.h4`
+    align-self: flex-start;
+    margin-top: 30px;
+    @font-face {
+        font-family: 'SF Pro Text Medium';
+        src: local('SF Pro Text Medium'), url(${SFProTextMedium}) format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+    font-family: 'SF Pro Text Medium';
+    font-weight: 500;
+    font-size: 18px;
+    color: #1D1F26;
+    padding-left: 60px;
+`;
+
+export const ReleasesContainer = styled.div`
+    margin-top: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    width: calc(95vw - 305px);
+    margin-left: 3vw;
+    height: 290px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        height: 6px;
+    }
+
+/* Track */
+    &::-webkit-scrollbar-track {
+        border-radius: 100px;
+    }
+ 
+/* Handle */
+    &:hover{
+        &::-webkit-scrollbar-thumb {
+        background: #B0A5A8; 
+        border-radius: 100px;
+    }
+    }
+    
+/* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #B0A5A8;
+    }
+`;
+
+export const ReleasesColumn = styled.div`
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    height: 65px;
+    margin: 10px;
+    background: white;
+`;
+
+export const ReleaseAlbum = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const ReleaseAutorContainer = styled.div`
+    display: block;
+    margin-top: -5px;
+    line-height: 1px;
+    margin-left: 10px;
+`;
+
+export const ReleaseName = styled.h5`
+    color: #1C1E25;
+    @font-face {
+        font-family: 'SF Pro Text Bold';
+        src: local('SF Pro Text Bold'), url(${SFProTextBold}) format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+    font-weight: bold;
+    font-family: 'SF Pro Text Bold';
+    font-size: 14px;
+`;
+
+export const ReleaseAutor = styled.p`
+    margin-top: -5px;
+    color: #51596D;
+    @font-face {
+        font-family: 'SF Pro Text Regular';
+        src: local('SF Pro Text Regular'), url(${SFProTextRegular}) format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+    font-weight: 400;
+    font-family: 'SF Pro Text Regular';
+    font-size: 14px;
+`;
+
+export const ReleaseAction = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const ReleaseTime = styled.span`
+    @font-face {
+            font-family: 'SF Pro Text Light';
+            src: local('SF Pro Text Light'), url(${SFProTextLight}) format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+    font-family: 'SF Pro Text Light';
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(81, 89, 109, 0.8);
 `;

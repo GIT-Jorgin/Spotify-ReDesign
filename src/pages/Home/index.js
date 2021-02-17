@@ -25,7 +25,26 @@ import {
     MusicProgress,
     MusicProgressCount,
     MusicVolume,
-    MainContainer
+    MainContainer,
+    Header,
+    HeaderInfo,
+    HeaderIMG,
+    HeaderTitle,
+    HeaderDesc,
+    HeaderInteract,
+    HeaderButton,
+    HeaderAction,
+    Releases,
+    ReleasesTitle,
+    ReleasesContainer,
+    ReleasesColumn,
+    ReleaseAlbum,
+    ReleaseAutorContainer,
+    ReleaseName,
+    ReleaseAutor,
+    ReleaseAction,
+    ReleaseTime,
+    GhostNav,
 } from './styles';
 import Logo from '../../images/logo.png';
 import IconExplore from '../../images/icon_explore.png';
@@ -45,6 +64,23 @@ import ButtonPause from '../../images/button_pause.png';
 import IconNext from '../../images/icon_next.png';
 import IconReplay from '../../images/icon_replay.png';
 import IconVolume from '../../images/icon_volume.png';
+import bitmap from '../../images/bitmap.png';
+import buttonFavorite from '../../images/button_favorites.png';
+import buttonShare from '../../images/button_share.png';
+import album1 from '../../images/album-1.png';
+import album2 from '../../images/album-2.png';
+import album3 from '../../images/album-3.png';
+import album4 from '../../images/album-4.png';
+import album5 from '../../images/album-5.png';
+import album6 from '../../images/album-6.png';
+import album7 from '../../images/album-7.png';
+import album8 from '../../images/album-8.png';
+import album9 from '../../images/album-9.png';
+import iconPlayMini from '../../images/icon_play_mini.png';
+import iconLikeMini from '../../images/icon_like_mini.png';
+import iconPauseMini from '../../images/icon_pause_mini.png';
+import iconLikedMini from '../../images/icon_liked_mini.png';
+
 
 export default function Home(){
 
@@ -136,6 +172,8 @@ export default function Home(){
                     <MusicVolumeSlider aria-label="pretto slider" defaultValue={55} />
                 </MusicVolume>
             </MusicPlayer>
+            <GhostNav>
+            </GhostNav>
             <SideNav>
                 <SideNavContainer>
                     <LogoIMG alt="Spotify" src={Logo} />
@@ -208,7 +246,149 @@ export default function Home(){
                 </SideNavContainer>
             </SideNav>
             <MainContainer>
-                
+                <Header>
+                    <HeaderInfo>
+                        <HeaderTitle>Os maiores sucessos da semana</HeaderTitle>
+                        <HeaderDesc>Vibrações de música novas para um ótimo humor durante o dia com energia e paixão!</HeaderDesc>
+                        <HeaderInteract>
+                            <HeaderButton>ESCUTAR AGORA</HeaderButton>
+                            <HeaderAction src={buttonFavorite} />
+                            <HeaderAction src={buttonShare} />
+                        </HeaderInteract>
+                    </HeaderInfo>
+                    <HeaderIMG src={bitmap}  />
+                </Header>
+                <Releases>
+                    <ReleasesTitle>Lançamentos</ReleasesTitle>
+                    <ReleasesContainer>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPlayMini} />
+                                <img style={{marginLeft: 10}} src={album1} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>Mister Radio</ReleaseName>
+                                <ReleaseAutor>Louder</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:45</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPauseMini} />
+                                <img style={{marginLeft: 10}} src={Album} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>MOOD</ReleaseName>
+                                <ReleaseAutor>24kGoldn</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:45</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikedMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPlayMini} />
+                                <img style={{marginLeft: 10}} src={album3} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>Skylines</ReleaseName>
+                                <ReleaseAutor>Hello forever</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:45</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPlayMini} />
+                                <img style={{marginLeft: 10}} src={album4} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>Lighthouse</ReleaseName>
+                                <ReleaseAutor>Sweet, but psycho</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:45</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPlayMini} />
+                                <img style={{marginLeft: 10}} src={album5} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>Blackpink</ReleaseName>
+                                <ReleaseAutor>Kill this love</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>3:44</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPlayMini} />
+                                <img style={{marginLeft: 10}} src={album6} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>BMTH</ReleaseName>
+                                <ReleaseAutor>Mantra</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>3:53</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPlayMini} />
+                                <img style={{marginLeft: 10}} src={album7} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>MARUV</ReleaseName>
+                                <ReleaseAutor>Crooked</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>3:26</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPlayMini} />
+                                <img style={{marginLeft: 10}} src={album8} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>Fallulah</ReleaseName>
+                                <ReleaseAutor>Dysfunctional</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>3:44</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img src={iconPlayMini} />
+                                <img style={{marginLeft: 10}} src={album9} />
+                                <ReleaseAutorContainer>
+                                <ReleaseName>Zero One One</ReleaseName>
+                                <ReleaseAutor>In cold blood</ReleaseAutor>
+                            </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:45</ReleaseTime>
+                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                    </ReleasesContainer>
+                </Releases>
             </MainContainer>
         </Body>
     )

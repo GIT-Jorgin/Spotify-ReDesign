@@ -15,32 +15,10 @@ export const Body = styled.div`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     display: grid;
-    height: 100vh;
     grid-template-columns: 305px 1fr;
     margin: 0;
     padding: 0;
     outline: 0;
-    overflow: scroll;
-
-/* width */
-&::-webkit-scrollbar {
-  width: 7px;
-}
-
-/* Track */
-&::-webkit-scrollbar-track {
-  border-radius: 100px;
-}
- 
-/* Handle */
-&::-webkit-scrollbar-thumb {
-  background: #B0A5A8; 
-}
-
-/* Handle on hover */
-&::-webkit-scrollbar-thumb:hover {
-  background: #A5999D;
-}
 `;
 
 export const SideNav = styled.div`
@@ -277,8 +255,8 @@ export const MusicVolume = styled.div`
 
 export const MainContainer = styled.div`
     display: grid;
-    grid-template-rows: 330px 1fr 1fr;
-    background: rgba(250, 251, 254, 1);
+    height: calc(100vh + 300px);
+    grid-template-rows: 330px 330px 330px;
 `;
 
 export const Header = styled.div`
@@ -391,7 +369,7 @@ export const ReleasesContainer = styled.div`
     flex-direction: column;
     width: calc(95vw - 305px);
     margin-left: 3vw;
-    height: 290px;
+    height: 265px;
     overflow-x: scroll;
 
     &::-webkit-scrollbar {
@@ -483,4 +461,57 @@ export const ReleaseTime = styled.span`
     font-size: 14px;
     font-weight: 300;
     color: rgba(81, 89, 109, 0.8);
+`;
+
+export const Recommended = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+`;
+
+export const RecommendedTitle = styled.h4`
+    align-self: flex-start;
+    margin-top: 30px;
+    @font-face {
+        font-family: 'SF Pro Text Medium';
+        src: local('SF Pro Text Medium'), url(${SFProTextMedium}) format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+    font-family: 'SF Pro Text Medium';
+    font-weight: 500;
+    font-size: 18px;
+    color: #1D1F26;
+    padding-left: 60px;
+`;
+
+export const RecommendedContainer = styled.div`
+    display: flex;
+    width: calc(96vw - 305px);
+    margin-left: 3vw;
+    padding-bottom: 10px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        height: 6px;
+    }
+
+/* Track */
+    &::-webkit-scrollbar-track {
+        border-radius: 100px;
+    }
+ 
+/* Handle */
+    &:hover{
+        &::-webkit-scrollbar-thumb {
+        background: #B0A5A8; 
+        border-radius: 100px;
+    }
+    }
+    
+/* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #B0A5A8;
+    }
 `;

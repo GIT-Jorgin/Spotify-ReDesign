@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Slider from '@material-ui/core/Slider';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
-import { 
+import {
     Body,
     SideNav,
     LogoIMG,
@@ -45,6 +45,9 @@ import {
     ReleaseAction,
     ReleaseTime,
     GhostNav,
+    Recommended,
+    RecommendedTitle,
+    RecommendedContainer
 } from './styles';
 import Logo from '../../images/logo.png';
 import IconExplore from '../../images/icon_explore.png';
@@ -80,72 +83,78 @@ import iconPlayMini from '../../images/icon_play_mini.png';
 import iconLikeMini from '../../images/icon_like_mini.png';
 import iconPauseMini from '../../images/icon_pause_mini.png';
 import iconLikedMini from '../../images/icon_liked_mini.png';
+import AlbumA from '../../images/albumA.png';
+import AlbumB from '../../images/albumB.png';
+import AlbumC from '../../images/albumC.png';
+import AlbumD from '../../images/albumD.png';
+import AlbumE from '../../images/albumE.png';
+import AlbumF from '../../images/albumF.png';
 
 
-export default function Home(){
+export default function Home() {
 
 
-      const ProgressMusicSlider = withStyles({
+    const ProgressMusicSlider = withStyles({
         root: {
-          marginTop: 3,
-          color: '#1DE9B6',
-          height: 8,
-          width: 270
+            marginTop: 3,
+            color: '#1DE9B6',
+            height: 8,
+            width: 270
         },
         thumb: {
-          height: 14,
-          width: 14,
-          marginTop: -5,
-          marginLeft: -12,
-          '&:focus, &:hover, &$active': {
-            boxShadow: 'inherit',
-          },
+            height: 14,
+            width: 14,
+            marginTop: -5,
+            marginLeft: -12,
+            '&:focus, &:hover, &$active': {
+                boxShadow: 'inherit',
+            },
         },
         active: {},
         valueLabel: {
-          left: 'calc(-50% + 4px)',
+            left: 'calc(-50% + 4px)',
         },
         track: {
-          height: 4,
-          borderRadius: 4,
+            height: 4,
+            borderRadius: 4,
         },
         rail: {
-          height: 4,
-          borderRadius: 4,
+            height: 4,
+            borderRadius: 4,
         },
-      })(Slider);
-      
-      const MusicVolumeSlider = withStyles({
+    })(Slider);
+
+    const MusicVolumeSlider = withStyles({
         root: {
-          marginTop: 3,
-          color: '#1DE9B6',
-          height: 8,
-          width: 120,
+            marginTop: 3,
+            color: '#1DE9B6',
+            height: 8,
+            width: 120,
         },
         thumb: {
-          height: 14,
-          width: 14,
-          marginTop: -5,
-          marginLeft: -12,
-          '&:focus, &:hover, &$active': {
-            boxShadow: 'inherit',
-          },
+            height: 14,
+            width: 14,
+            marginTop: -5,
+            marginLeft: -12,
+            '&:focus, &:hover, &$active': {
+                boxShadow: 'inherit',
+            },
         },
         active: {},
         valueLabel: {
-          left: 'calc(-50% + 4px)',
+            left: 'calc(-50% + 4px)',
         },
         track: {
-          height: 4,
-          borderRadius: 4,
+            height: 4,
+            borderRadius: 4,
         },
         rail: {
-          height: 4,
-          borderRadius: 4,
+            height: 4,
+            borderRadius: 4,
         },
-      })(Slider);
+    })(Slider);
 
-    return(
+    return (
         <Body>
             <MusicPlayer>
                 <PlayingSong>
@@ -177,16 +186,16 @@ export default function Home(){
             <SideNav>
                 <SideNavContainer>
                     <LogoIMG alt="Spotify" src={Logo} />
-                    <MenuGroup style={{marginTop: 30}}>
+                    <MenuGroup style={{ marginTop: 30 }}>
                         <MenuGroupTitle>PROCURAR MUSICA</MenuGroupTitle>
                         <MenuItemList>
-                            <MenuItem style={{marginTop: 5}}>
+                            <MenuItem style={{ marginTop: 5 }}>
                                 <MenuItemIcon src={IconExplore} />
                                 <MenuItemText>Explorar</MenuItemText>
                             </MenuItem>
                             <MenuItemActive>
                                 <MenuItemIcon src={icon_hear_this} />
-                                <MenuItemText style={{color: 'rgba(29, 233, 182, 1)'}}>Ouça agora</MenuItemText>
+                                <MenuItemText style={{ color: 'rgba(29, 233, 182, 1)' }}>Ouça agora</MenuItemText>
                             </MenuItemActive>
                             <MenuItem>
                                 <MenuItemIcon src={IconRadio} />
@@ -194,10 +203,10 @@ export default function Home(){
                             </MenuItem>
                         </MenuItemList>
                     </MenuGroup>
-                    <MenuGroup style={{marginTop: 20}}>
+                    <MenuGroup style={{ marginTop: 20 }}>
                         <MenuGroupTitle>SUA BIBLIOTECA</MenuGroupTitle>
                         <MenuItemList>
-                            <MenuItem style={{marginTop: 5}}>
+                            <MenuItem style={{ marginTop: 5 }}>
                                 <MenuItemIcon src={IconLastAdded} />
                                 <MenuItemText>Ultimas adicionadas</MenuItemText>
                             </MenuItem>
@@ -219,13 +228,13 @@ export default function Home(){
                             </MenuItem>
                         </MenuItemList>
                     </MenuGroup>
-                    <MenuGroup style={{marginTop: 20, paddingBottom: 60}}>
+                    <MenuGroup style={{ marginTop: 20, paddingBottom: 60 }}>
                         <MenuPlaylist>
                             <MenuGroupTitle>PLAYLISTS</MenuGroupTitle>
                             <MenuItemIcon src={IconAddPlaylist} />
                         </MenuPlaylist>
                         <MenuItemList>
-                            <MenuItem style={{marginTop: 5}}>
+                            <MenuItem style={{ marginTop: 5 }}>
                                 <MenuItemIcon src={IconPlaylist} />
                                 <MenuItemText>Sextou</MenuItemText>
                             </MenuItem>
@@ -256,139 +265,150 @@ export default function Home(){
                             <HeaderAction src={buttonShare} />
                         </HeaderInteract>
                     </HeaderInfo>
-                    <HeaderIMG src={bitmap}  />
+                    <HeaderIMG src={bitmap} />
                 </Header>
                 <Releases>
-                    <ReleasesTitle>Lançamentos</ReleasesTitle>
+                    <ReleasesTitle>Ultimos lançamentos</ReleasesTitle>
                     <ReleasesContainer>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPlayMini} />
-                                <img style={{marginLeft: 10}} src={album1} />
+                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album1} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>Mister Radio</ReleaseName>
-                                <ReleaseAutor>Louder</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>Mister Radio</ReleaseName>
+                                    <ReleaseAutor>Louder</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPauseMini} />
-                                <img style={{marginLeft: 10}} src={Album} />
+                                <img style={{cursor: 'pointer'}} src={iconPauseMini} />
+                                <img style={{ marginLeft: 10 }} src={Album} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>MOOD</ReleaseName>
-                                <ReleaseAutor>24kGoldn</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>MOOD</ReleaseName>
+                                    <ReleaseAutor>24kGoldn</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikedMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikedMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPlayMini} />
-                                <img style={{marginLeft: 10}} src={album3} />
+                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album3} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>Skylines</ReleaseName>
-                                <ReleaseAutor>Hello forever</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>Skylines</ReleaseName>
+                                    <ReleaseAutor>Hello forever</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPlayMini} />
-                                <img style={{marginLeft: 10}} src={album4} />
+                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album4} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>Lighthouse</ReleaseName>
-                                <ReleaseAutor>Sweet, but psycho</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>Lighthouse</ReleaseName>
+                                    <ReleaseAutor>Sweet, but psycho</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPlayMini} />
-                                <img style={{marginLeft: 10}} src={album5} />
+                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album5} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>Blackpink</ReleaseName>
-                                <ReleaseAutor>Kill this love</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>Blackpink</ReleaseName>
+                                    <ReleaseAutor>Kill this love</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>3:44</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPlayMini} />
-                                <img style={{marginLeft: 10}} src={album6} />
+                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album6} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>BMTH</ReleaseName>
-                                <ReleaseAutor>Mantra</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>BMTH</ReleaseName>
+                                    <ReleaseAutor>Mantra</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>3:53</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPlayMini} />
-                                <img style={{marginLeft: 10}} src={album7} />
+                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album7} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>MARUV</ReleaseName>
-                                <ReleaseAutor>Crooked</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>MARUV</ReleaseName>
+                                    <ReleaseAutor>Crooked</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>3:26</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPlayMini} />
-                                <img style={{marginLeft: 10}} src={album8} />
+                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album8} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>Fallulah</ReleaseName>
-                                <ReleaseAutor>Dysfunctional</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>Fallulah</ReleaseName>
+                                    <ReleaseAutor>Dysfunctional</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>3:44</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img src={iconPlayMini} />
-                                <img style={{marginLeft: 10}} src={album9} />
+                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album9} />
                                 <ReleaseAutorContainer>
-                                <ReleaseName>Zero One One</ReleaseName>
-                                <ReleaseAutor>In cold blood</ReleaseAutor>
-                            </ReleaseAutorContainer>
+                                    <ReleaseName>Zero One One</ReleaseName>
+                                    <ReleaseAutor>In cold blood</ReleaseAutor>
+                                </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{marginLeft: 30}} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                     </ReleasesContainer>
                 </Releases>
+                <Recommended>
+                    <RecommendedTitle>Albums recomendados</RecommendedTitle>
+                    <RecommendedContainer>
+                        <img style={{marginLeft: 30}} src={AlbumA} />
+                        <img style={{marginLeft: 20}} src={AlbumB} />
+                        <img style={{marginLeft: 20}} src={AlbumC} />
+                        <img style={{marginLeft: 20}} src={AlbumD} />
+                        <img style={{marginLeft: 20}} src={AlbumE} />
+                        <img style={{marginLeft: 20}} src={AlbumF} />
+                    </RecommendedContainer>
+                </Recommended>
             </MainContainer>
         </Body>
     )

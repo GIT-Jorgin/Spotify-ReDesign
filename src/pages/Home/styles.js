@@ -239,8 +239,18 @@ export const MusicController = styled.div`
     justify-content: space-between;
 
     @media(max-width: 460px){
-        width: 90%;
-        padding-left: 0px;
+        display: none;
+    }
+`;
+
+export const RespMusicController = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    @media(min-width: 461px){
+        display: none;
     }
 `;
 
@@ -291,6 +301,10 @@ export const MainContainer = styled.div`
     display: grid;
     height: calc(100vh + 300px);
     grid-template-rows: 330px 330px 330px;
+
+    @media(max-width: 460px){
+        height: calc(100vh + 180px);
+    }
 `;
 
 export const Header = styled.div`

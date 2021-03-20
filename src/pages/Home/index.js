@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from '@material-ui/core/Slider';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import {
     Body,
     SideNav,
@@ -47,7 +47,8 @@ import {
     GhostNav,
     Recommended,
     RecommendedTitle,
-    RecommendedContainer
+    RecommendedContainer,
+    RespMusicController
 } from './styles';
 import Logo from '../../images/logo.png';
 import IconExplore from '../../images/icon_explore.png';
@@ -89,7 +90,10 @@ import AlbumC from '../../images/albumC.png';
 import AlbumD from '../../images/albumD.png';
 import AlbumE from '../../images/albumE.png';
 import AlbumF from '../../images/albumF.png';
-
+import playRespIcon from '../../images/playRespIcon.png';
+import searchRespIcon from '../../images/searchRespIcon.png';
+import heartRespIcon from '../../images/heartRespIcon.png';
+import configRespIcon from '../../images/configRespIcon.png';
 
 export default function Home() {
 
@@ -164,6 +168,12 @@ export default function Home() {
                         <ArtistName>24kGoldn</ArtistName>
                     </PlayingSongName>
                 </PlayingSong>
+                <RespMusicController>
+                    <img width="38" src={searchRespIcon} />
+                    <img width="40" src={playRespIcon} />
+                    <img width="40" src={heartRespIcon} />
+                    <img width="30" src={configRespIcon} />
+                </RespMusicController>
                 <MusicController>
                     <ControllerIcon src={IconShuffle} />
                     <ControllerIcon src={IconBack} />

@@ -19,6 +19,10 @@ export const Body = styled.div`
     margin: 0;
     padding: 0;
     outline: 0;
+
+    @media(max-width: 460px){
+        display: flex;
+    }
 `;
 
 export const SideNav = styled.div`
@@ -51,6 +55,10 @@ export const SideNav = styled.div`
 &::-webkit-scrollbar-thumb:hover {
   background: #A5999D;
 }
+
+@media(max-width: 460px){
+        display: none;
+    }
 `;
 
 export const GhostNav = styled.div`
@@ -62,6 +70,10 @@ export const GhostNav = styled.div`
     background: rgba(0,39,64, 0);
     overflow-y: auto;
     overflow-x: hidden;
+
+    @media(max-width: 460px){
+        display: none;
+    }
 `;
 
 export const SideNavContainer = styled.div`
@@ -163,12 +175,20 @@ export const MusicPlayer = styled.div`
     width: 100vw;
     height: 80px;
     background: rgba(255, 255, 255, 0.85);
+
+    @media(max-width: 460px){
+        border-top: 1.5px solid #DADADA;
+    }
 `;
 
 export const PlayingSong = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media(max-width: 460px){
+        display: none;
+    }
 `;
 
 export const PlayingSongAlbum = styled.img`
@@ -217,13 +237,19 @@ export const MusicController = styled.div`
     padding-left: 8%;
     align-items: center;
     justify-content: space-between;
+
+    @media(max-width: 460px){
+        width: 90%;
+        padding-left: 0px;
+    }
 `;
 
 export const ControllerIcon = styled.img`
     cursor: pointer;
     padding: 10px;
     border-radius: 100px;
-
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     &:hover{
         background: rgba(0, 0, 0, 0.1)
     }
@@ -234,6 +260,10 @@ export const MusicProgress = styled.div`
     width: 25%;
     align-items: center;
     justify-content: space-between;
+
+    @media(max-width: 460px){
+        display: none;
+    }
 `;
 
 export const MusicProgressCount = styled.h1`
@@ -251,6 +281,10 @@ export const MusicProgressCount = styled.h1`
 export const MusicVolume = styled.div`
     display: flex;
     align-items: center;
+
+    @media(max-width: 460px){
+        display: none;
+    }
 `;
 
 export const MainContainer = styled.div`
@@ -271,12 +305,25 @@ export const Header = styled.div`
 export const HeaderInfo = styled.div`
     display: block;
     max-width: 500px;
+    
+    @media(max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
 `;
 
 export const HeaderIMG = styled.img`
     align-self: flex-end;
     width: 32%;
     opacity: .4;
+
+    @media(max-width: 800px){
+        display: none;
+    }
 `;
 
 export const HeaderTitle = styled.h1`
@@ -291,6 +338,16 @@ export const HeaderTitle = styled.h1`
     font-weight: 300;
     font-size: 50px;
     color: #FFF;
+
+    @media(max-width: 800px){
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    @media(max-width: 460px){
+        font-size: 30px;
+        line-height: 35px;
+    }
 `;
 
 export const HeaderDesc = styled.h5`
@@ -304,6 +361,10 @@ export const HeaderDesc = styled.h5`
     font-family: 'SF Pro Text Regular';
     font-size: 16px;
     color: #FFF;
+
+    @media(max-width: 460px){
+        margin-top: 10px;
+    }
 `;
 
 export const HeaderInteract = styled.div`
@@ -359,6 +420,10 @@ export const ReleasesTitle = styled.h4`
     font-size: 18px;
     color: #1D1F26;
     padding-left: 60px;
+
+    @media(max-width: 460px){
+        padding-left: 25px;
+    }
 `;
 
 export const ReleasesContainer = styled.div`
@@ -392,6 +457,11 @@ export const ReleasesContainer = styled.div`
 /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
         background: #B0A5A8;
+    }
+
+    @media(max-width: 460px){
+        width: 100%;
+        margin-left: 0px;
     }
 `;
 
@@ -467,7 +537,7 @@ export const Recommended = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
+    width: calc(95vw - 305px);
     height: 100%;
 `;
 
@@ -485,6 +555,11 @@ export const RecommendedTitle = styled.h4`
     font-size: 18px;
     color: #1D1F26;
     padding-left: 60px;
+
+        @media(max-width: 460px){
+        width: 200px;
+        padding-left: 25px;
+    }
 `;
 
 export const RecommendedContainer = styled.div`
@@ -513,5 +588,10 @@ export const RecommendedContainer = styled.div`
 /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
         background: #B0A5A8;
+    }
+
+    @media(max-width: 460px){
+        width: 95vw;
+        margin-left: 0px;
     }
 `;

@@ -258,7 +258,7 @@ export default function Home() {
                 <Header>
                     <HeaderInfo>
                         <HeaderTitle>Os maiores sucessos da semana</HeaderTitle>
-                        <HeaderDesc>Vibrações de música novas para um ótimo humor durante o dia com energia e paixão!</HeaderDesc>
+                        <HeaderDesc>Vibrações de músicas novas para um ótimo humor durante o dia com energia e paixão!</HeaderDesc>
                         <HeaderInteract>
                             <HeaderButton>ESCUTAR AGORA</HeaderButton>
                             <HeaderAction src={buttonFavorite} />
@@ -401,7 +401,7 @@ export default function Home() {
                 <Recommended>
                     <RecommendedTitle>Albums recomendados</RecommendedTitle>
                     <RecommendedContainer>
-                        <img style={{marginLeft: 30}} src={AlbumA} />
+                        <img style={{marginLeft: 20}} src={AlbumA} />
                         <img style={{marginLeft: 20}} src={AlbumB} />
                         <img style={{marginLeft: 20}} src={AlbumC} />
                         <img style={{marginLeft: 20}} src={AlbumD} />

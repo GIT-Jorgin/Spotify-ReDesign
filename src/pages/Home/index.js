@@ -271,8 +271,8 @@ export default function Home() {
                         <HeaderDesc>Vibrações de músicas novas para um ótimo humor durante o dia com energia e paixão!</HeaderDesc>
                         <HeaderInteract>
                             <HeaderButton>ESCUTAR AGORA</HeaderButton>
-                            <HeaderAction src={buttonFavorite} />
-                            <HeaderAction src={buttonShare} />
+                            <HeaderAction width="40" src={buttonFavorite} />
+                            <HeaderAction width="40" src={buttonShare} />
                         </HeaderInteract>
                     </HeaderInfo>
                     <HeaderIMG src={bitmap} />
@@ -282,7 +282,7 @@ export default function Home() {
                     <ReleasesContainer>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
                                 <img style={{ marginLeft: 10 }} src={album1} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>Mister Radio</ReleaseName>
@@ -291,12 +291,12 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPauseMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPauseMini} />
                                 <img style={{ marginLeft: 10 }} src={Album} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>MOOD</ReleaseName>
@@ -305,12 +305,12 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikedMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikedMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
                                 <img style={{ marginLeft: 10 }} src={album3} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>Skylines</ReleaseName>
@@ -319,12 +319,12 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
                                 <img style={{ marginLeft: 10 }} src={album4} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>Lighthouse</ReleaseName>
@@ -333,12 +333,12 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
                                 <img style={{ marginLeft: 10 }} src={album5} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>Blackpink</ReleaseName>
@@ -347,12 +347,12 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>3:44</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
                                 <img style={{ marginLeft: 10 }} src={album6} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>BMTH</ReleaseName>
@@ -361,12 +361,12 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>3:53</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
                                 <img style={{ marginLeft: 10 }} src={album7} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>MARUV</ReleaseName>
@@ -375,12 +375,12 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>3:26</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
                                 <img style={{ marginLeft: 10 }} src={album8} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>Fallulah</ReleaseName>
@@ -389,12 +389,12 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>3:44</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                         <ReleasesColumn>
                             <ReleaseAlbum>
-                                <img style={{cursor: 'pointer'}} src={iconPlayMini} />
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
                                 <img style={{ marginLeft: 10 }} src={album9} />
                                 <ReleaseAutorContainer>
                                     <ReleaseName>Zero One One</ReleaseName>
@@ -403,7 +403,7 @@ export default function Home() {
                             </ReleaseAlbum>
                             <ReleaseAction>
                                 <ReleaseTime>2:45</ReleaseTime>
-                                <img style={{ marginLeft: 30, cursor: 'pointer' }} src={iconLikeMini} />
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
                     </ReleasesContainer>

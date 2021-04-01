@@ -20,7 +20,7 @@ export const Body = styled.div`
     padding: 0;
     outline: 0;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         display: flex;
     }
 `;
@@ -56,7 +56,7 @@ export const SideNav = styled.div`
   background: #A5999D;
 }
 
-@media(max-width: 460px){
+@media(max-width: 566px){
         display: none;
     }
 `;
@@ -71,7 +71,7 @@ export const GhostNav = styled.div`
     overflow-y: auto;
     overflow-x: hidden;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         display: none;
     }
 `;
@@ -176,7 +176,7 @@ export const MusicPlayer = styled.div`
     height: 80px;
     background: rgba(255, 255, 255, 0.85);
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         border-top: 1.5px solid #DADADA;
     }
 `;
@@ -186,7 +186,7 @@ export const PlayingSong = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         display: none;
     }
 `;
@@ -238,7 +238,7 @@ export const MusicController = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         display: none;
     }
 `;
@@ -249,7 +249,7 @@ export const RespMusicController = styled.div`
     justify-content: space-around;
     align-items: center;
 
-    @media(min-width: 461px){
+    @media(min-width: 567px){
         display: none;
     }
 `;
@@ -271,7 +271,7 @@ export const MusicProgress = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         display: none;
     }
 `;
@@ -292,7 +292,7 @@ export const MusicVolume = styled.div`
     display: flex;
     align-items: center;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         display: none;
     }
 `;
@@ -302,7 +302,8 @@ export const MainContainer = styled.div`
     height: calc(100vh + 300px);
     grid-template-rows: 330px 330px 330px;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
+        width: 100vw;
         height: calc(100vh + 180px);
     }
 `;
@@ -336,7 +337,10 @@ export const HeaderIMG = styled.img`
     opacity: .4;
 
     @media(max-width: 800px){
-        display: none;
+        height: 45%;
+        width: auto;
+        opacity: .1;
+        position: absolute;
     }
 `;
 
@@ -352,13 +356,14 @@ export const HeaderTitle = styled.h1`
     font-weight: 300;
     font-size: 50px;
     color: #FFF;
+    z-index: 999;
 
     @media(max-width: 800px){
         font-size: 40px;
         line-height: 40px;
     }
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         font-size: 30px;
         line-height: 35px;
     }
@@ -375,8 +380,9 @@ export const HeaderDesc = styled.h5`
     font-family: 'SF Pro Text Regular';
     font-size: 16px;
     color: #FFF;
+    z-index: 999;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         margin-top: 10px;
     }
 `;
@@ -396,6 +402,7 @@ export const HeaderButton = styled.button`
     }
     
     cursor: pointer;
+    z-index: 999;
     font-family: 'SF Pro Text SemiBold';
     font-weight: 600;
     width: 160px;
@@ -410,6 +417,7 @@ export const HeaderButton = styled.button`
 
 export const HeaderAction = styled.img`
     cursor: pointer;
+    z-index: 999;
 `;
 
 export const Releases = styled.div`
@@ -435,7 +443,7 @@ export const ReleasesTitle = styled.h4`
     color: #1D1F26;
     padding-left: 60px;
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         padding-left: 25px;
     }
 `;
@@ -473,7 +481,7 @@ export const ReleasesContainer = styled.div`
         background: #B0A5A8;
     }
 
-    @media(max-width: 460px){
+    @media(max-width: 566px){
         width: 100%;
         margin-left: 0px;
     }
@@ -553,6 +561,7 @@ export const Recommended = styled.div`
     justify-content: flex-start;
     width: calc(95vw - 305px);
     height: 100%;
+    margin-bottom: 100px;
 `;
 
 export const RecommendedTitle = styled.h4`
@@ -570,7 +579,7 @@ export const RecommendedTitle = styled.h4`
     color: #1D1F26;
     padding-left: 60px;
 
-        @media(max-width: 460px){
+        @media(max-width: 566px){
         width: 200px;
         padding-left: 25px;
     }
@@ -604,8 +613,8 @@ export const RecommendedContainer = styled.div`
         background: #B0A5A8;
     }
 
-    @media(max-width: 460px){
-        width: 95vw;
+    @media(max-width: 566px){
+        width: 98vw;
         margin-left: 0px;
     }
 `;

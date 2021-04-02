@@ -174,10 +174,16 @@ export const MusicPlayer = styled.div`
     left: 0;
     width: 100vw;
     height: 80px;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 9999;
+
+    @media(max-width: 718px){
+        justify-content: space-between;
+    }
 
     @media(max-width: 566px){
         border-top: 1.5px solid #DADADA;
+        background: rgba(255, 255, 255, 0.95);
     }
 `;
 
@@ -238,6 +244,14 @@ export const MusicController = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    @media(max-width: 934px){
+        padding-left: 0%;
+    }
+
+    @media(max-width: 750px){
+        margin-left: -70px;
+    }
+
     @media(max-width: 566px){
         display: none;
     }
@@ -271,6 +285,12 @@ export const MusicProgress = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 934px){
+        width: 16%
+    }
+
+
+
     @media(max-width: 566px){
         display: none;
     }
@@ -292,6 +312,10 @@ export const MusicVolume = styled.div`
     display: flex;
     align-items: center;
 
+    @media(max-width: 850px){
+        margin-left: -80px;
+    }
+
     @media(max-width: 566px){
         display: none;
     }
@@ -299,10 +323,12 @@ export const MusicVolume = styled.div`
 
 export const MainContainer = styled.div`
     display: grid;
+    max-width: calc(100vw - 305px);
     height: calc(100vh + 300px);
-    grid-template-rows: 330px 330px 330px;
+    grid-template-rows: 340px 330px 330px;
 
     @media(max-width: 566px){
+        max-width: 100vw;
         width: 100vw;
         height: calc(100vh + 180px);
     }
@@ -311,33 +337,126 @@ export const MainContainer = styled.div`
 export const Header = styled.div`
     width: 100%;
     display: flex;
-    align-items: space-evenly;
+    align-items: flex-start;
     justify-content: center;
     background: rgb(29,233,182);
     background: linear-gradient(158deg, rgba(29,233,182,1) 0%, rgba(0,182,234,1) 85%);
 `;
+export const HeaderNav = styled.div`
+    display: flex;
+    position: absolute;
+    width: calc(100vw - 350px);
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media(max-width: 566px){
+        width: 90vw;
+    }
+`;
+
+export const SearchContent = styled.div`
+    width: 230px;
+    height: 30px;
+    z-index: 999;
+`;
+
+export const SearchInputIcon = styled.img`
+    position: absolute;
+    width: 18px;
+    margin: 9px 0px 0px 10px;
+`;
+
+export const SearchInput = styled.input`
+    width: 100%;
+    height: 35px;
+    z-index: 9999;
+    padding: 0px 20px 0px 35px;
+    border: 0;
+    border-radius: 100px;
+    outline: none;
+    color: #51596D;
+    background: rgba(255, 255, 255, 0.3);
+    @font-face {
+        font-family: 'SF Pro Text Regular';
+        src: local('SF Pro Text Regular'), url(${SFProTextRegular}) format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    font-family: 'SF Pro Text Regular';
+
+    &::placeholder{
+        color: #51596D;
+    }
+`;
+
+export const UserPic = styled.img`
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+`;
 
 export const HeaderInfo = styled.div`
+    position: absolute;
+    left: 410px;
     display: block;
     max-width: 500px;
     
-    @media(max-width: 800px){
+    @media(max-width: 2600px){
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    @media(max-width: 1121px){
+        margin-top: 10px;
+        left: 350px;
+        z-index: 100;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 90%;
+    }
+
+    @media(max-width: 1667px){
+        margin-top: 10px;
+    }
+
+    @media(max-width: 800px){
+        width: 50vw;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+    }
+
+    @media(max-width: 566px){
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
     }
 `;
 
 export const HeaderIMG = styled.img`
+    position: absolute;
+    right: 100px;
     align-self: flex-end;
-    width: 32%;
+    width: 370px;
     opacity: .4;
 
+    @media(max-width: 1121px){
+        right: 40px;
+    }
+
     @media(max-width: 800px){
-        height: 45%;
+        height: 345px;
+        right: 15px;
         width: auto;
         opacity: .1;
         position: absolute;
@@ -351,6 +470,7 @@ export const HeaderTitle = styled.h1`
             font-weight: 300;
             font-style: normal;
         }
+    margin-top: 70px;
     line-height: 48px;
     font-family: 'SF Pro Text Light';
     font-weight: 300;
@@ -358,9 +478,18 @@ export const HeaderTitle = styled.h1`
     color: #FFF;
     z-index: 999;
 
-    @media(max-width: 800px){
-        font-size: 40px;
+    @media(max-width: 1121px){
+        text-align: center;
+    }
+
+    @media(max-width: 840px){
+        font-size: 35px;
         line-height: 40px;
+    }
+
+    @media(max-width: 800px){
+        font-size: 30px;
+        line-height: 35px;
     }
 
     @media(max-width: 566px){
@@ -381,6 +510,15 @@ export const HeaderDesc = styled.h5`
     font-size: 16px;
     color: #FFF;
     z-index: 999;
+
+    @media(max-width: 1121px){
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    @media(max-width: 800px){
+        margin-top: 10px;
+    }
 
     @media(max-width: 566px){
         margin-top: 10px;
@@ -593,6 +731,10 @@ export const RecommendedContainer = styled.div`
     overflow-x: scroll;
     &::-webkit-scrollbar {
         height: 6px;
+    }
+
+    @media(min-width: 1800px) and (max-width: 2600px){
+        margin-left: 1.6vw;
     }
 
 /* Track */

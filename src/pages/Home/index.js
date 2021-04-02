@@ -48,7 +48,12 @@ import {
     Recommended,
     RecommendedTitle,
     RecommendedContainer,
-    RespMusicController
+    RespMusicController,
+    HeaderNav,
+    SearchInput,
+    UserPic,
+    SearchInputIcon,
+    SearchContent
 } from './styles';
 import Logo from '../../images/logo.png';
 import IconExplore from '../../images/icon_explore.png';
@@ -80,6 +85,12 @@ import album6 from '../../images/album-6.png';
 import album7 from '../../images/album-7.png';
 import album8 from '../../images/album-8.png';
 import album9 from '../../images/album-9.png';
+import album10 from '../../images/album-10.png';
+import album11 from '../../images/album-11.png';
+import album12 from '../../images/album-12.png';
+import album13 from '../../images/album-13.png';
+import album14 from '../../images/album-14.png';
+import album15 from '../../images/album-15.png';
 import iconPlayMini from '../../images/icon_play_mini.png';
 import iconLikeMini from '../../images/icon_like_mini.png';
 import iconPauseMini from '../../images/icon_pause_mini.png';
@@ -90,20 +101,30 @@ import AlbumC from '../../images/albumC.png';
 import AlbumD from '../../images/albumD.png';
 import AlbumE from '../../images/albumE.png';
 import AlbumF from '../../images/albumF.png';
+import AlbumG from '../../images/albumG.png';
+import AlbumH from '../../images/albumH.png';
+import AlbumI from '../../images/albumI.png';
+import AlbumJ from '../../images/albumJ.png';
+import AlbumK from '../../images/albumK.png';
+import AlbumL from '../../images/albumL.png';
 import playRespIcon from '../../images/playRespIcon.png';
 import searchRespIcon from '../../images/searchRespIcon.png';
 import heartRespIcon from '../../images/heartRespIcon.png';
 import configRespIcon from '../../images/configRespIcon.png';
+import searchMusicIcon from '../../images/searchMusicIcon.png';
+import userPic from '../../images/profPic.png';
 
 export default function Home() {
+    const { innerWidth: Swidth, innerHeight: Sheight } = window;
 
+    console.log(Swidth);
 
     const ProgressMusicSlider = withStyles({
         root: {
             marginTop: 3,
             color: '#1DE9B6',
             height: 8,
-            width: 270
+            width: Swidth <= 934 ? 120 : 270
         },
         thumb: {
             height: 14,
@@ -266,6 +287,13 @@ export default function Home() {
             </SideNav>
             <MainContainer>
                 <Header>
+                    <HeaderNav>
+                        <SearchContent>
+                            <SearchInputIcon src={searchMusicIcon} />
+                            <SearchInput placeholder="Pesquisar musicas, artistas, generos..." />
+                        </SearchContent>
+                        <UserPic src={userPic} />
+                    </HeaderNav>
                     <HeaderInfo>
                         <HeaderTitle>Os maiores sucessos da semana</HeaderTitle>
                         <HeaderDesc>Vibrações de músicas novas para um ótimo humor durante o dia com energia e paixão!</HeaderDesc>
@@ -406,17 +434,107 @@ export default function Home() {
                                 <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album10} />
+                                <ReleaseAutorContainer>
+                                    <ReleaseName>Ela É do Tipo</ReleaseName>
+                                    <ReleaseAutor>MC Kevin o Chris</ReleaseAutor>
+                                </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:50</ReleaseTime>
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album11} />
+                                <ReleaseAutorContainer>
+                                    <ReleaseName>Know You Better</ReleaseName>
+                                    <ReleaseAutor>Stadiumx</ReleaseAutor>
+                                </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>3:10</ReleaseTime>
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album12} />
+                                <ReleaseAutorContainer>
+                                    <ReleaseName>With Me</ReleaseName>
+                                    <ReleaseAutor>Dastic</ReleaseAutor>
+                                </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:38</ReleaseTime>
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album13} />
+                                <ReleaseAutorContainer>
+                                    <ReleaseName>2020</ReleaseName>
+                                    <ReleaseAutor>MC Hariel</ReleaseAutor>
+                                </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:38</ReleaseTime>
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album14} />
+                                <ReleaseAutorContainer>
+                                    <ReleaseName>Cool Kids</ReleaseName>
+                                    <ReleaseAutor>Echosmith</ReleaseAutor>
+                                </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:50</ReleaseTime>
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
+                        <ReleasesColumn>
+                            <ReleaseAlbum>
+                                <img style={{cursor: 'pointer', width: 20}} src={iconPlayMini} />
+                                <img style={{ marginLeft: 10 }} src={album15} />
+                                <ReleaseAutorContainer>
+                                    <ReleaseName>Sunflower</ReleaseName>
+                                    <ReleaseAutor>Post Malone</ReleaseAutor>
+                                </ReleaseAutorContainer>
+                            </ReleaseAlbum>
+                            <ReleaseAction>
+                                <ReleaseTime>2:50</ReleaseTime>
+                                <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
+                            </ReleaseAction>
+                        </ReleasesColumn>
                     </ReleasesContainer>
                 </Releases>
                 <Recommended>
                     <RecommendedTitle>Albums recomendados</RecommendedTitle>
                     <RecommendedContainer>
-                        <img style={{marginLeft: 20}} src={AlbumA} />
+                        <img style={{marginLeft: 15}} src={AlbumA} />
                         <img style={{marginLeft: 20}} src={AlbumB} />
                         <img style={{marginLeft: 20}} src={AlbumC} />
                         <img style={{marginLeft: 20}} src={AlbumD} />
                         <img style={{marginLeft: 20}} src={AlbumE} />
                         <img style={{marginLeft: 20}} src={AlbumF} />
+                        <img style={{marginLeft: 20}} src={AlbumG} />
+                        <img style={{marginLeft: 20}} src={AlbumH} />
+                        <img style={{marginLeft: 20}} src={AlbumI} />
+                        <img style={{marginLeft: 20}} src={AlbumJ} />
+                        <img style={{marginLeft: 20}} src={AlbumK} />
+                        <img style={{marginLeft: 15}} src={AlbumL} />
                     </RecommendedContainer>
                 </Recommended>
             </MainContainer>

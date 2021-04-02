@@ -359,6 +359,18 @@ export const SearchContent = styled.div`
     width: 230px;
     height: 30px;
     z-index: 999;
+    
+    @media(max-width: 507px){
+        width: 200px;
+    }
+
+    @media(max-width: 335px){
+        width: 150px;
+    }
+
+    @media(max-width: 277px){
+        width: 117px;
+    }
 `;
 
 export const SearchInputIcon = styled.img`
@@ -395,6 +407,7 @@ export const UserPic = styled.img`
     width: 45px;
     height: 45px;
     border-radius: 100px;
+    cursor: pointer;
 `;
 
 export const HeaderInfo = styled.div`
@@ -440,6 +453,10 @@ export const HeaderInfo = styled.div`
         margin-right: auto;
         left: 0;
         right: 0;
+    }
+
+    @media(max-width: 507px){
+        max-width: 90vw;
     }
 `;
 
@@ -623,6 +640,14 @@ export const ReleasesContainer = styled.div`
         width: 100%;
         margin-left: 0px;
     }
+
+    @media(max-width: 397px){
+        width: 98vw;
+    }
+
+    @media(max-width: 326px){
+        width: 90vw;
+    }
 `;
 
 export const ReleasesColumn = styled.div`
@@ -758,5 +783,9 @@ export const RecommendedContainer = styled.div`
     @media(max-width: 566px){
         width: 98vw;
         margin-left: 0px;
+    }
+
+    @media(max-width: 326px){
+        width: 97vw;
     }
 `;

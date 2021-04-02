@@ -117,8 +117,6 @@ import userPic from '../../images/profPic.png';
 export default function Home() {
     const { innerWidth: Swidth, innerHeight: Sheight } = window;
 
-    console.log(Swidth);
-
     const ProgressMusicSlider = withStyles({
         root: {
             marginTop: 3,

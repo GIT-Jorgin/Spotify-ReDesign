@@ -53,7 +53,8 @@ import {
     SearchInput,
     UserPic,
     SearchInputIcon,
-    SearchContent
+    SearchContent,
+    RespActiveItem
 } from './styles';
 import Logo from '../../images/logo.png';
 import IconExplore from '../../images/icon_explore.png';
@@ -188,10 +189,11 @@ export default function Home() {
                     </PlayingSongName>
                 </PlayingSong>
                 <RespMusicController>
-                    <img width="38" src={searchRespIcon} />
-                    <img width="40" src={playRespIcon} />
-                    <img width="40" src={heartRespIcon} />
-                    <img width="30" src={configRespIcon} />
+                    <img width="35" src={searchRespIcon} />
+                    <RespActiveItem></RespActiveItem>
+                    <img width="35" src={playRespIcon} />
+                    <img width="35" src={heartRespIcon} />
+                    <img width="36" src={configRespIcon} />
                 </RespMusicController>
                 <MusicController>
                     <ControllerIcon src={IconShuffle} />
@@ -512,7 +514,7 @@ export default function Home() {
                                 </ReleaseAutorContainer>
                             </ReleaseAlbum>
                             <ReleaseAction>
-                                <ReleaseTime>2:50</ReleaseTime>
+                                <ReleaseTime>3:00</ReleaseTime>
                                 <img style={{ marginLeft: 30, cursor: 'pointer', width: 20 }} src={iconLikeMini} />
                             </ReleaseAction>
                         </ReleasesColumn>

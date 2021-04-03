@@ -138,6 +138,17 @@ export const MenuItemActive = styled.div`
     background-color: rgba(29, 233, 182, 0.15);
 `;
 
+export const RespActiveItem = styled.div`
+    position: absolute;
+    margin-bottom: auto;
+    bottom: 0;
+    width: 50px;
+    height: 5px;
+    margin-right: 26%;
+    border-radius: 100px;
+    background: rgb(29,233,182);
+`;
+
 export const MenuItemIcon = styled.img`
     cursor: pointer;
 `;
